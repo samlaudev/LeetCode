@@ -9,8 +9,6 @@ public:
         if (nums.size() < 4) {
             return result;
         }
-        // 排序
-        sort(nums.begin(), nums.end());
         // 使用哈希表存储两个数的和
         for (int i = 0; i < nums.size() - 1; i++) {
             for (int j = i + 1; j < nums.size(); j++) {
@@ -36,6 +34,7 @@ public:
                 }
             }
         }
+
         // 移除重复数组
         sort(result.begin(), result.end());
         result.erase(unique(result.begin(), result.end()), result.end());
