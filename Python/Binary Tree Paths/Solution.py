@@ -31,7 +31,6 @@ class Solution:
         self.binaryTreePathsRecursive(root, path, result)
         return result
 
-
     def binaryTreePathsRecursive(self, node, path, result):
         if not node:
             return
@@ -52,5 +51,3 @@ class Solution:
             path.append(node.val)
             self.binaryTreePathsRecursive(node.right, path, result)
             path.pop()
-
-            
