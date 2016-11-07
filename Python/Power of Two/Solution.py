@@ -13,22 +13,18 @@ class Solution(object):
         if n < 0:
             return False
 
-        fast = False
-        slow = False
+        result = False
         for i in xrange(31):
             if (n & 1):
-                if not fast:
-                    fast = True
+                if not result:
+                    result = True
                 else:
-                    slow = True
+                    result = False
                     break
 
             n >>= 1
 
-        if slow:
-            return False
-
-        return fast
+        return result
 
 if __name__ == '__main__':
     Solution().isPowerOfTwo(1)
