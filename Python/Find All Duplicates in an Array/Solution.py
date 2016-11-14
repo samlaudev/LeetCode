@@ -23,7 +23,7 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        result = [0 for i in range(len(nums))]
+        result = [0] * len(nums)
 
         for i in nums:
             result[i-1] += 1
