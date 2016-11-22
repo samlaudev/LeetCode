@@ -16,9 +16,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: void Do not return anything, modify nums in-place instead.
         """
+        pos = 0
+
         for i in xrange(len(nums)):
-            if nums[i] == 0:
-                for j in xrange(i+1, len(nums)):
-                    if nums[j] != 0:
-                        nums[i], nums[j] = nums[j], nums[i]
-                        break
+            if nums[i]:
+                nums[i], nums[pos] = nums[pos], nums[i]
+                pos += 1
