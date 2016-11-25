@@ -1,3 +1,11 @@
+# Problem: Summary Ranges
+#
+# Given a sorted integer array without duplicates, return the summary of its ranges.
+#
+# For example, given [0,1,2,4,5,7], return ["0->2","4->5","7"].
+#
+################################################################################
+
 class Solution(object):
     def summaryRanges(self, nums):
         """
@@ -5,6 +13,7 @@ class Solution(object):
         :rtype: List[str]
         """
 
+        # check empty nums
         if not len(nums):
             return []
 
